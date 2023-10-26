@@ -1,0 +1,13 @@
+import { gql } from '@apollo/client';
+
+export const CREATE_ROLE_MUTATION = gql`
+  mutation CreateRole($input: NewRoleInput!) {
+    createRole(input: $input) {
+      id
+      name
+      description
+      # Add other fields you want to retrieve after creating the role
+    }
+  }
+`;
+  
